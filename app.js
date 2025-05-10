@@ -17,12 +17,18 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL],
+    origin: process.env.FRONTEND_URL, // ✅ Use a specific domain
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
 
+
+// cors({
+//   origin: [process.env.FRONTEND_URL],
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+//   credentials: true,
+// })
 // Using routes
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/task", taskRouter);

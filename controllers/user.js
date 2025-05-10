@@ -24,6 +24,7 @@ export const login = async (req, res, next) => {
 
 export const register = async (req, res) => {
   try {
+    // console.log("Cheking the register ")
     const { name, email, password } = req.body;
 
     let user = await User.findOne({ email });

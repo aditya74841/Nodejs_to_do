@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:5173","https://react-todo-frontend-silk.vercel.app"], // e.g., https://your-frontend.com
+    origin: ["http://localhost:5173","https://react-todo-frontend-silk.vercel.app","https://p5.iamadityaranjan.com/"], // e.g., https://your-frontend.com
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })

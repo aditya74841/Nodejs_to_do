@@ -42,6 +42,7 @@ export const register = async (req, res) => {
 };
 
 export const getMyProfile = (req, res) => {
+  console.log("Checking the get My Profile")
   res.status(200).json({
     success: true,
     user: req.user,
